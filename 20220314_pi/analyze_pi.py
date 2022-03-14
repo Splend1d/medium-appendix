@@ -48,8 +48,8 @@ for k in range(10):
     pidigits_afterisk_all_for_barplot.append(pidigits_afterisk_for_barplot)
 
 import scipy.stats
-res = scipy.stats.chisquare(pidigits_for_barplot)
-print(res)
+res, p = scipy.stats.chisquare(pidigits_for_barplot)
+print("Distribution of the first 1000000 digits of pi is an uniform distribution, p value=", p)
 for k in range(10):
-    res2 = scipy.stats.chisquare(pidigits_afterisk_all_for_barplot[k])
-    print(res2)
+    res2, p = scipy.stats.chisquare(pidigits_afterisk_all_for_barplot[k])
+    print(f"Distribution of the first 1000000 digits of pi trailing '{k}' is an uniform distribution, p value=",p)

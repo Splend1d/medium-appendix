@@ -9,3 +9,7 @@ mp.dps = 1000000  # set number of digits
 with open("pi1000000.txt","w") as f:
 	f.write(str(mp.pi))
 #print(mp.pi)   # print pi to a thousand places
+mp.dps = 1000  # set number of digits
+with open("pi1000.txt","w") as f:
+    f.write(str(mp.pi))
+#print(mp.pi)   # print pi to a thousand places
